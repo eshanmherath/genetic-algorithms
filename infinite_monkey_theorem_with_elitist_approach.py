@@ -57,6 +57,9 @@ while generation <= max_generations:
         population_selection_index[i] = fitness_scores[i]
     population_selection_index = sorted(population_selection_index.items(), key=lambda x: x[1], reverse=True)
 
+    top_candidate = population_selection_index[0][0]
+    print("Generation : " + str(generation) + "\t\t" + str(population[top_candidate]))
+
     parent_candidates = []
     for candidate in population_selection_index:
         parent_candidates.append(population[candidate[0]])
@@ -88,6 +91,5 @@ while generation <= max_generations:
                 child_dna[i] = choice(alphabet)
         mutated_child = ''.join(child_dna)
         mutated_generation.append(mutated_child)
-        print("Generation : " + str(generation) + "\t\t" + str(mutated_child))
 
     population = mutated_generation
