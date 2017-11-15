@@ -14,6 +14,7 @@ def single_point_crossover(parent_1, parent_2, crossover_point):
             offspring_2.append(parent_1_dna)
     return [''.join(offspring_1), ''.join(offspring_2)]
 
+
 parent1 = '11111111111'
 parent2 = '00000000000'
 offsprings = single_point_crossover(parent1, parent2, 5)
