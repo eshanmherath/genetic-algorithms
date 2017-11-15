@@ -1,4 +1,4 @@
-def single_point_crossover(parent_1, parent_2, crossover_point_1, crossover_point_2):
+def two_point_crossover(parent_1, parent_2, crossover_point_1, crossover_point_2):
     mask = ['0' for _ in range(len(parent_1))]
     for i in range(crossover_point_1, crossover_point_2+1):
         mask[i] = '1'
@@ -16,7 +16,7 @@ def single_point_crossover(parent_1, parent_2, crossover_point_1, crossover_poin
 
 parent1 = '11111111111'
 parent2 = '00000000000'
-offsprings = single_point_crossover(parent1, parent2, 2, 5)
+offsprings = two_point_crossover(parent1, parent2, 2, 5)
 print("\n Two point crossover")
 print("Parent 1    : " + parent1)
 print("Parent 2    : " + parent2)
